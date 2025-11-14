@@ -20,9 +20,9 @@ jobs:
           java-version: 17
 
       - name: Unit tests
-        run: mvm -v test --file-pom.xml
+        run: mvn -v test --file-pom.xml
 
       - name: Build the application
-        run: 
+        run: |
           mvn clean
           mvn -B package --file pom.xml
